@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextjs-argo
+  namespace: default 
+  labels:
+    app: nextjs-argo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nextjs-argo
+  template:
+    metadata:
+      labels:
+        app: nextjs-argo
+    spec:
+      containers:
+      - name: nextjs-argo
+        image: makarajr126/next-manifest-file:latest
+        ports:
+        - containerPort: 3000
