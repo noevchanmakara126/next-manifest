@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: nextjs-argo
-        image: makarajr126/next-manifest-file:latest
+        image: makarajr126/spring-app:9
         ports:
         - containerPort: 3000
